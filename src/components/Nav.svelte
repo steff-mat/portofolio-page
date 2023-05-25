@@ -45,7 +45,7 @@
       color: black;
     }
   }
-  @media only screen and (min-width: 786px) {
+  /* @media only screen and (min-width: 786px) {
     nav {
       height: 2.5rem;
     }
@@ -53,5 +53,5 @@
       font-size: 0.75em;
       height: 1rem;
     }
-  }
+  } */
 </style>

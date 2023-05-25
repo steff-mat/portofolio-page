@@ -143,11 +143,11 @@
       color: black;
     }
   }
-  @media only screen and (min-width: 786px) {
+  /* @media only screen and (min-width: 786px) {
     button {
       width: 25%;
       height: 1.5rem;
       font-size: 1em;
     }
-  }
+  } */
 </style>
