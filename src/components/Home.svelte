@@ -83,7 +83,7 @@
 
 <style>
   svg {
-    width: 25%;
+    width: 10%;
     margin: 0 auto;
     margin-bottom: 1rem;
     animation: moveUpDown 2500ms ease-in-out infinite;
@@ -109,7 +109,8 @@
   }
   button {
     margin: 0 auto;
-    width: 80%;
+    width: 50%;
+    height: 2rem;
     border-radius: 25px;
     margin-bottom: 1rem;
   }
