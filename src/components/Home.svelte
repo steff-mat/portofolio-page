@@ -50,7 +50,7 @@
 <ContentBox
   id="welcome"
   headerText="Welcome!"
-  content="For latest Blog updates, click below:"
+  content="Latest projects available in Portofolio section, otherwise feel free to check out the blog section below."
   description=""
   img=""
 >
