@@ -35,6 +35,7 @@
         filteredData.push({ id, headerText, content, description, img });
       });
       filteredData = filteredData;
+      console.log(filteredData);
     })
     .catch((error) => {
       console.log('Error:', error);

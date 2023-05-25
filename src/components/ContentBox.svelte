@@ -1,4 +1,5 @@
 <script>
+  import { fade, fly } from 'svelte/transition';
   export let id;
   export let headerText;
   export let content;
@@ -6,14 +7,18 @@
   export let img;
 </script>
 
-<div {id} class="holder">
-  <div class="header_holder">
-    <h1 class="header">{headerText}</h1>
-    <p class="text">{content}</p>
+<div {id} class="holder" in:fly={{ y: 200, duration: 2000 }} out:fade>
+  <div class="header_holder" in:fade out:fade>
+    <h1 class="header" in:fade out:fade>{headerText}</h1>
+    <p class="text" in:fade out:fade>{content}</p>
   </div>
-  <div style="display: flex; flex-direction:column; align-items:center; ">
-    <p class="description">{description}</p>
-    <img class="img" src={img} alt={description} />
+  <div
+    style="display: flex; flex-direction:column; align-items:center;"
+    in:fade
+    out:fade
+  >
+    <p class="description" in:fade out:fade>{description}</p>
+    <img class="img" src={img} alt={description} in:fade out:fade />
   </div>
 </div>
 
