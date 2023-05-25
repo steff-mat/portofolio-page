@@ -47,7 +47,7 @@
     margin-bottom: 2rem;
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: light) {
     .holder {
       background-color: rgba(0, 0, 0, 0.5);
       box-shadow: 2px 2px 5px #e8449a;
@@ -61,7 +61,7 @@
       text-shadow: 0px 0px 2px yellow;
     }
   }
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme: dark) {
     .holder {
       background-color: rgba(25, 25, 25, 0.5);
       box-shadow: 2px 2px 5px #6ecdef;

@@ -1,7 +1,3 @@
-<script>
-</script>
-
-<!-- blank -->
 <nav>
   <button class="nav_btn">Home</button>
   <button class="nav_btn">Portofolio</button>
@@ -26,7 +22,7 @@
     transition: all 250ms;
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: light) {
     .nav_btn {
       color: black;
       background-color: #6ecdef;
@@ -37,7 +33,7 @@
       box-shadow: 2px 2px 2px 2px #6ecdef;
     }
   }
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme: dark) {
     .nav_btn {
       background-color: black;
       box-shadow: 2px 2px 2px 2px #6ecdef;
