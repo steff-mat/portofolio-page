@@ -1,6 +1,5 @@
 <script>
   import ContentBox from './ContentBox.svelte';
-  import { data } from './data';
 
   import * as cheerio from 'cheerio';
 
@@ -16,7 +15,24 @@
         const id = $(row).find('td:nth-child(2)').text();
         const headerText = $(row).find('td:nth-child(3)').text();
         const content = $(row).find('td:nth-child(4)').text();
-        filteredData.push({ id, headerText, content });
+        const description = $(row).find('td:nth-child(5)').text();
+        const rawImg = $(row).find('td:nth-child(6)').text();
+        let img;
+        if (rawImg !== '') {
+          const rawImgPre = rawImg
+            .split('')
+            .splice(32)
+            .join('')
+            .split('')
+            .splice(0, 33)
+            .join('');
+          img = `https://drive.google.com/uc?export=download&id=${rawImgPre}`;
+        }
+        if (rawImg == '') {
+          img =
+            'https://drive.google.com/uc?export=download&id=1q12Svt00-gmkhdLEmTmLW3zprRbxHwaZ';
+        }
+        filteredData.push({ id, headerText, content, description, img });
       });
       console.log(filteredData);
       filteredData = filteredData;

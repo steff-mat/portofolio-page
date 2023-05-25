@@ -2,37 +2,73 @@
   export let id;
   export let headerText;
   export let content;
+  export let description;
+  export let img;
 </script>
 
-<div {id}>
-  <h1>{headerText}</h1>
-  <p>{content}</p>
+<div {id} class="holder">
+  <div class="header_holder">
+    <h1 class="header">{headerText}</h1>
+    <p class="text">{content}</p>
+  </div>
+  <div style="display: flex; flex-direction:column; align-items:center">
+    <p class="description">{description}</p>
+    <img class="img" src={img} alt={description} />
+  </div>
 </div>
 
 <style>
-  div {
+  .holder {
     width: 80%;
     max-width: 768px;
     min-height: 5rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 2.5rem;
     border-radius: 25px;
+    margin: 2.5rem auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
   }
-  h1,
-  p {
-    padding: 1rem;
+  .header {
+    text-decoration: underline;
   }
-  h1 {
-    color: #e8449a;
-    text-shadow: 0px 0px 5px #e8449a;
+  .header,
+  .text {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
-  p {
-    color: #6ecdef;
-    text-shadow: 0px 0px 2px #6ecdef;
+  .description {
+    font-style: italic;
+    text-decoration: underline;
+  }
+  .img {
+    width: 90%;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .holder {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .header {
+      color: #e8449a;
+      text-shadow: 0px 0px 5px #e8449a;
+    }
+    p {
+      color: #6ecdef;
+      text-shadow: 0px 0px 2px #6ecdef;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    .holder {
+      background-color: rgba(0, 0, 0, 0.95);
+    }
+    .header {
+      color: yellow;
+      text-shadow: 0px 0px 5px yellow;
+    }
+    p {
+      color: yellow;
+      text-shadow: 0px 0px 2px yellow;
+    }
   }
 </style>
