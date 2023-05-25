@@ -1,5 +1,6 @@
 <script>
   import { fade, fly } from 'svelte/transition';
+
   export let id;
   export let headerText;
   export let content;
@@ -20,6 +21,7 @@
     <p class="description" in:fade out:fade>{description}</p>
     <img class="img" src={img} alt={description} in:fade out:fade />
   </div>
+  <slot />
 </div>
 
 <style>
