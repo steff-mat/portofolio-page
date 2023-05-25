@@ -40,12 +40,12 @@
   @media (prefers-color-scheme: light) {
     .nav_btn {
       background-color: black;
-      box-shadow: 2px 2px 2px 2px yellow;
-      color: yellow;
+      box-shadow: 2px 2px 2px 2px #6ecdef;
+      color: #6ecdef;
     }
     .nav_btn:hover {
       background-color: yellow;
-      box-shadow: 2px 2px 2px 2px black;
+      box-shadow: 2px 2px 2px 2px #6ecdef;
       color: black;
     }
   }

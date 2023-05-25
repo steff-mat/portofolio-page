@@ -11,7 +11,7 @@
     <h1 class="header">{headerText}</h1>
     <p class="text">{content}</p>
   </div>
-  <div style="display: flex; flex-direction:column; align-items:center">
+  <div style="display: flex; flex-direction:column; align-items:center; ">
     <p class="description">{description}</p>
     <img class="img" src={img} alt={description} />
   </div>
@@ -32,12 +32,14 @@
   }
   .header,
   .text {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .description {
     font-style: italic;
     text-decoration: underline;
+    color: yellow;
+    text-shadow: 0px 0px 2px yellow;
   }
   .img {
     width: 90%;
@@ -48,27 +50,29 @@
   @media (prefers-color-scheme: dark) {
     .holder {
       background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 2px 2px 5px #e8449a;
     }
     .header {
       color: #e8449a;
       text-shadow: 0px 0px 5px #e8449a;
     }
-    p {
-      color: #6ecdef;
-      text-shadow: 0px 0px 2px #6ecdef;
+    .text {
+      color: yellow;
+      text-shadow: 0px 0px 2px yellow;
     }
   }
   @media (prefers-color-scheme: light) {
     .holder {
-      background-color: rgba(0, 0, 0, 0.95);
+      background-color: rgba(25, 25, 25, 0.5);
+      box-shadow: 2px 2px 5px #6ecdef;
     }
     .header {
       color: yellow;
       text-shadow: 0px 0px 5px yellow;
     }
-    p {
-      color: yellow;
-      text-shadow: 0px 0px 2px yellow;
+    .text {
+      color: #6ecdef;
+      text-shadow: 0px 0px 2px #6ecdef;
     }
   }
 </style>
