@@ -27,7 +27,7 @@
 <style>
   .holder {
     width: 80%;
-    max-width: 768px;
+    max-width: 480px;
     min-height: 5rem;
     border-radius: 25px;
     margin: 2.5rem auto;

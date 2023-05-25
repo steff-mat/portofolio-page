@@ -17,7 +17,7 @@
   .nav_btn {
     font-size: 1.5em;
     width: 10rem;
-    height: 4rem;
+    height: 2.5rem;
     border: 0;
     transition: all 250ms;
   }
@@ -43,6 +43,15 @@
       background-color: yellow;
       box-shadow: 2px 2px 2px 2px #6ecdef;
       color: black;
+    }
+  }
+  @media only screen and (min-width: 786px) {
+    nav {
+      height: 2.5rem;
+    }
+    .nav_btn {
+      font-size: 0.75em;
+      height: 1rem;
     }
   }
 </style>
