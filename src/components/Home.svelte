@@ -28,10 +28,10 @@
             .join('');
           img = `https://drive.google.com/uc?export=download&id=${rawImgPre}`;
         }
-        if (rawImg == '') {
-          img =
-            'https://drive.google.com/uc?export=download&id=1q12Svt00-gmkhdLEmTmLW3zprRbxHwaZ';
-        }
+        // if (rawImg == '') {
+        //   img =
+        //     'https://drive.google.com/uc?export=download&id=1q12Svt00-gmkhdLEmTmLW3zprRbxHwaZ';
+        // }
         filteredData.push({ id, headerText, content, description, img });
       });
       filteredData = filteredData;
