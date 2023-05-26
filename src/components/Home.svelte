@@ -121,6 +121,7 @@
     height: 2rem;
     border-radius: 25px;
     margin-bottom: 1rem;
+    font-family: VCR_OSD, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
   @media (prefers-color-scheme: light) {
     svg {

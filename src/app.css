@@ -1,5 +1,11 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: VCR_OSD, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: VCR_OSD;
+  src: url(src/fonts/VCR_OSD_MONO_1.001.ttf);
+  font-display: swap;
 }
 
 body {

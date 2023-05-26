@@ -33,6 +33,7 @@
     height: 2.5rem;
     border: 0;
     transition: all 250ms;
+    font-family: VCR_OSD, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
 
   @media (prefers-color-scheme: light) {
