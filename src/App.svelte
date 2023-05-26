@@ -3,12 +3,10 @@
   import Nav from './components/Nav.svelte';
   import Portofolio from './components/Portofolio.svelte';
   import Contact from './components/Contact.svelte';
-  import { onMount } from 'svelte';
 
-  let activePage = 'Home'; // Initial active page
+  let activePage = 'Home';
   function handleChange(event) {
     activePage = event.detail;
-    console.log(activePage);
   }
 </script>
 

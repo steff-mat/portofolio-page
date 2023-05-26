@@ -7,11 +7,19 @@
   const sheetUrl =
     'https://docs.google.com/spreadsheets/d/1bsScW5hnMQus6CXvMDCcjMQ6q4iBqZINbmD3rekBFnc/edit#gid=0';
   let filteredData = [];
-
   function fetchPosts() {
+    const welcomeSection = document.querySelector('.header');
+    welcomeSection.innerText = 'Loading... Please wait!';
+    welcomeSection.style.color = 'orange';
+    const svgElem = document.querySelector('svg');
+    svgElem.style.display = 'none';
+    const btn = document.querySelector('.button');
+    btn.style.display = 'none';
     fetch(sheetUrl)
       .then((response) => response.text())
       .then((data) => {
+        welcomeSection.innerText = 'Welcome';
+        welcomeSection.style.color = '#e8449a';
         const $ = cheerio.load(data);
         const rows = $('table tbody tr');
         rows.each((index, row) => {
@@ -34,7 +42,6 @@
           filteredData.push({ id, headerText, content, description, img });
         });
         filteredData = filteredData;
-        // console.log(filteredData);
       })
       .catch((error) => {
         console.log('Error:', error);
@@ -55,6 +62,7 @@
   img=""
 >
   <svg
+    class="svg"
     version="1.1"
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +78,7 @@
       /></g
     ></svg
   >
-  <button on:click={viewBlog}>View Blog posts</button>
+  <button on:click={viewBlog} class="button">View Blog posts</button>
 </ContentBox>
 
 {#if showBlog}
@@ -143,11 +151,4 @@
       color: black;
     }
   }
-  /* @media only screen and (min-width: 786px) {
-    button {
-      width: 25%;
-      height: 1.5rem;
-      font-size: 1em;
-    }
-  } */
 </style>

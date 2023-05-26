@@ -4,7 +4,6 @@
 
   function handleClick(page) {
     dispatch('changePage', page);
-    console.log(page);
   }
 </script>
 
@@ -40,22 +39,22 @@
     .nav_btn {
       color: black;
       background-color: #6ecdef;
-      box-shadow: 2px 2px 2px 2px #e8449a;
+      box-shadow: 1px 1px 1px 1px #e8449a;
     }
     .nav_btn:hover {
       background-color: #e8449a;
-      box-shadow: 2px 2px 2px 2px #6ecdef;
+      box-shadow: 1px 1px 1px 1px #6ecdef;
     }
   }
   @media (prefers-color-scheme: dark) {
     .nav_btn {
       background-color: black;
-      box-shadow: 2px 2px 2px 2px #6ecdef;
+      box-shadow: 1px 1px 1px 1px #6ecdef;
       color: #6ecdef;
     }
     .nav_btn:hover {
       background-color: yellow;
-      box-shadow: 2px 2px 2px 2px #6ecdef;
+      box-shadow: 1px 1px 1px 1px #6ecdef;
       color: black;
     }
   }
