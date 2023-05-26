@@ -1,7 +1,21 @@
+<script>
+  import { createEventDispatcher } from 'svelte';
+  const dispatch = createEventDispatcher();
+
+  function handleClick(page) {
+    dispatch('changePage', page);
+    console.log(page);
+  }
+</script>
+
 <nav>
-  <button class="nav_btn">Home</button>
-  <button class="nav_btn">Portofolio</button>
-  <button class="nav_btn">Contact</button>
+  <button class="nav_btn" on:click={() => handleClick('Home')}>Home</button>
+  <button class="nav_btn" on:click={() => handleClick('Portofolio')}
+    >Portofolio</button
+  >
+  <button class="nav_btn" on:click={() => handleClick('Contact')}
+    >Contact</button
+  >
 </nav>
 
 <style>
@@ -45,13 +59,4 @@
       color: black;
     }
   }
-  /* @media only screen and (min-width: 786px) {
-    nav {
-      height: 2.5rem;
-    }
-    .nav_btn {
-      font-size: 0.75em;
-      height: 1rem;
-    }
-  } */
 </style>
