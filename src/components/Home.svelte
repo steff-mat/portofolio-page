@@ -101,9 +101,8 @@
   <button on:click={viewBlog} class="button">View Blog posts</button>
 </ContentBox>
 
-<Filter />
-
 {#if showBlog}
+  <Filter />
   {#each filteredData as item, i}
     {#if filteredData[i].headerText !== '' && i !== filteredData.length - 1}
       <ContentBox {...filteredData[i]} />

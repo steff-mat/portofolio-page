@@ -8,24 +8,27 @@
 </script>
 
 <nav>
-  <button class="nav_btn" on:click={() => handleClick('Home')}>Home</button>
   <button class="nav_btn" on:click={() => handleClick('Portofolio')}
     >Portofolio</button
   >
   <button class="nav_btn" on:click={() => handleClick('Contact')}
     >Contact</button
   >
+  <button class="nav_btn" on:click={() => handleClick('Home')}>Home</button>
 </nav>
 
 <style>
   nav {
     width: 1fr;
     max-width: 768px;
-    height: 5rem;
+    min-height: 5rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
+    gap: 1rem;
+    padding: 1rem;
   }
   .nav_btn {
     font-size: 1.5em;
