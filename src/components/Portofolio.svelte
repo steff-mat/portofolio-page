@@ -1,4 +1,6 @@
-<div />
+<div>
+  <a href="http://github.com/steff-mat">Click for GitHub Profile</a>
+</div>
 
 <style>
   div {
@@ -6,6 +8,9 @@
     height: 100dvh;
     background-color: rgba(192, 28, 56, 0);
     animation: changeColor 2s ease-in-out forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   @keyframes changeColor {
     0% {
