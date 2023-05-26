@@ -9,21 +9,29 @@
   let filteredData = [];
   function fetchPosts() {
     const welcomeSection = document.querySelector('.header');
+    // @ts-ignore
     welcomeSection.innerText = 'Loading... Please wait!';
-    welcomeSection.style.color = 'orange';
+    // @ts-ignore
+    welcomeSection.style.color = 'white';
+    // @ts-ignore
     welcomeSection.style.transition = 'all 250ms ease-in-out';
     const svgElem = document.querySelector('svg');
     svgElem.style.display = 'none';
     const btn = document.querySelector('.button');
+    // @ts-ignore
     btn.style.display = 'none';
     fetch(sheetUrl)
       .then((response) => response.text())
       .then((data) => {
+        // @ts-ignore
         welcomeSection.innerText = 'Welcome!';
-        welcomeSection.style.color = '#e8449a';
+        // @ts-ignore
+        welcomeSection.style.color = '';
+        // @ts-ignore
         welcomeSection.style.transition = 'all 250ms ease-in-out';
         const $ = cheerio.load(data);
         const rows = $('table tbody tr');
+        // @ts-ignore
         rows.each((index, row) => {
           const id = $(row).find('td:nth-child(2)').text();
           const headerText = $(row).find('td:nth-child(3)').text();
