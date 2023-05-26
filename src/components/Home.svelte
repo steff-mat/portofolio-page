@@ -11,6 +11,7 @@
     const welcomeSection = document.querySelector('.header');
     welcomeSection.innerText = 'Loading... Please wait!';
     welcomeSection.style.color = 'orange';
+    welcomeSection.style.transition = 'all 250ms ease-in-out';
     const svgElem = document.querySelector('svg');
     svgElem.style.display = 'none';
     const btn = document.querySelector('.button');
@@ -18,8 +19,9 @@
     fetch(sheetUrl)
       .then((response) => response.text())
       .then((data) => {
-        welcomeSection.innerText = 'Welcome';
+        welcomeSection.innerText = 'Welcome!';
         welcomeSection.style.color = '#e8449a';
+        welcomeSection.style.transition = 'all 250ms ease-in-out';
         const $ = cheerio.load(data);
         const rows = $('table tbody tr');
         rows.each((index, row) => {
