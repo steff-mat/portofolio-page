@@ -12,6 +12,7 @@
 </script>
 
 <Nav on:changePage={handleChange} />
+
 {#if activePage === 'Home'}
   <Home />
 {:else if activePage === 'Portofolio'}

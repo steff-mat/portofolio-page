@@ -1,6 +1,7 @@
 <script>
   import ContentBox from './ContentBox.svelte';
   import * as cheerio from 'cheerio';
+  import Filter from './Filter.svelte';
 
   let showBlog = false;
 
@@ -34,10 +35,11 @@
         // @ts-ignore
         rows.each((index, row) => {
           const id = $(row).find('td:nth-child(2)').text();
-          const headerText = $(row).find('td:nth-child(3)').text();
-          const content = $(row).find('td:nth-child(4)').text();
-          const description = $(row).find('td:nth-child(5)').text();
-          const rawImg = $(row).find('td:nth-child(6)').text();
+          const category = $(row).find('td:nth-child(3)').text();
+          const headerText = $(row).find('td:nth-child(4)').text();
+          const content = $(row).find('td:nth-child(5)').text();
+          const description = $(row).find('td:nth-child(6)').text();
+          const rawImg = $(row).find('td:nth-child(7)').text();
           let img;
           if (rawImg !== '') {
             const rawImgPre = rawImg
@@ -49,7 +51,14 @@
               .join('');
             img = `https://drive.google.com/uc?export=download&id=${rawImgPre}`;
           }
-          filteredData.push({ id, headerText, content, description, img });
+          filteredData.push({
+            id,
+            category,
+            headerText,
+            content,
+            description,
+            img,
+          });
         });
         filteredData = filteredData;
       })
@@ -66,6 +75,7 @@
 
 <ContentBox
   id="welcome"
+  category=""
   headerText="Welcome!"
   content="Latest projects available in Portofolio section, otherwise feel free to check out the blog section below."
   description=""
@@ -90,6 +100,8 @@
   >
   <button on:click={viewBlog} class="button">View Blog posts</button>
 </ContentBox>
+
+<Filter />
 
 {#if showBlog}
   {#each filteredData as item, i}

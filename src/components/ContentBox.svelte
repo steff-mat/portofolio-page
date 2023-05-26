@@ -2,6 +2,7 @@
   import { fade, fly } from 'svelte/transition';
 
   export let id;
+  export let category;
   export let headerText;
   export let content;
   export let description;
@@ -20,6 +21,9 @@
   >
     <p class="description" in:fade out:fade>{description}</p>
     <img class="img" src={img} alt={description} in:fade out:fade />
+    {#if category !== ''}
+      <p class="category" in:fade out:fade><span>Category:</span> {category}</p>
+    {/if}
   </div>
   <slot />
 </div>
@@ -42,7 +46,8 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .description {
+  .description,
+  .category {
     font-style: italic;
     text-decoration: underline;
     color: yellow;
@@ -59,11 +64,13 @@
       background-color: rgba(0, 0, 0, 0.5);
       box-shadow: 2px 2px 5px #e8449a;
     }
-    .header {
+    .header,
+    .category {
       color: #e8449a;
       text-shadow: 0px 0px 5px #e8449a;
     }
-    .text {
+    .text,
+    p span {
       color: yellow;
       text-shadow: 0px 0px 2px yellow;
     }
@@ -73,11 +80,13 @@
       background-color: rgba(25, 25, 25, 0.5);
       box-shadow: 2px 2px 5px #6ecdef;
     }
-    .header {
+    .header,
+    .category {
       color: yellow;
       text-shadow: 0px 0px 5px yellow;
     }
-    .text {
+    .text,
+    p span {
       color: #6ecdef;
       text-shadow: 0px 0px 2px #6ecdef;
     }
