@@ -78,7 +78,7 @@
 <ContentBox
   id="welcome"
   category=""
-  headerText="Welcome!"
+  headerText="Welcome! 👾"
   content="Latest projects available in Portofolio section, otherwise feel free to check out the blog section below."
   description=""
   img=""

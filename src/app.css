@@ -1,16 +1,10 @@
 :root {
-  font-family: VCR_OSD, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'VCR_OSD', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 @font-face {
-  font-family: VCR_OSD;
+  font-family: 'VCR_OSD';
   src: url(src/fonts/VCR_OSD_MONO_1.001.ttf);
-  font-display: swap;
-}
-
-body {
-  margin: 0;
-  /* font-size: 0.7rem; */
 }
 
 @media (prefers-color-scheme: light) {
@@ -21,11 +15,5 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: black;
-  }
-}
-
-@media only screen and (min-width: 786px) {
-  body {
-    /* font-size: 0.7rem; */
   }
 }
