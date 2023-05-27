@@ -1,13 +1,15 @@
 <script>
   import ContentBox from './ContentBox.svelte';
-  import * as cheerio from 'cheerio';
   import Filter from './Filter.svelte';
-
+  import * as cheerio from 'cheerio';
+  let cBholder = document.getElementsByClassName('holder');
   let showBlog = false;
+  let selectedValue;
+  let cBcat = document.getElementsByClassName(selectedValue);
 
   const sheetUrl =
     'https://docs.google.com/spreadsheets/d/1bsScW5hnMQus6CXvMDCcjMQ6q4iBqZINbmD3rekBFnc/edit#gid=0';
-  let filteredData = [];
+  export let filteredData = [];
   function fetchPosts() {
     const welcomeSection = document.querySelector('.header');
     // @ts-ignore
@@ -102,10 +104,15 @@
 </ContentBox>
 
 {#if showBlog}
-  <Filter />
+  <Filter
+    bind:selectedValue
+    on:valueSelected={(event) => (selectedValue = event.detail)}
+  />
   {#each filteredData as item, i}
     {#if filteredData[i].headerText !== '' && i !== filteredData.length - 1}
-      <ContentBox {...filteredData[i]} />
+      {#if filteredData[i].category == selectedValue}
+        <ContentBox {...filteredData[i]} />
+      {/if}
     {/if}
   {/each}
 {/if}

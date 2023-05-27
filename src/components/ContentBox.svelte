@@ -9,7 +9,12 @@
   export let img;
 </script>
 
-<div {id} class="holder" in:fly={{ y: 200, duration: 2000 }} out:fade>
+<div
+  {id}
+  class="holder {category.toLowerCase()}"
+  in:fly={{ y: 200, duration: 2000 }}
+  out:fade
+>
   <div class="header_holder" in:fade out:fade>
     <h1 class="header" in:fade out:fade>{headerText}</h1>
     <p class="text" in:fade out:fade>{content}</p>

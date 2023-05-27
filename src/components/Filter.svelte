@@ -1,13 +1,26 @@
 <script>
+  export let selectedValue;
+  import { createEventDispatcher } from 'svelte';
+  const dispatch = createEventDispatcher();
+
+  function handleChange(e) {
+    const { value } = e.target;
+    dispatch('valueSelected', value);
+  }
 </script>
 
 <!-- HTML -->
 <div class="filter-box">
   <p>Filter by:</p>
-  <select name="post_type" id="post_type">
-    <option value="none">---</option>
+  <select
+    name="post_type"
+    id="post_type"
+    bind:value={selectedValue}
+    on:change={handleChange}
+  >
+    <option value="">All</option>
     <option value="article">Article</option>
-    <option value="project">Project</option>
+    <option value="project ">Project</option>
     <option value="news">News</option>
   </select>
 </div>
