@@ -7,6 +7,10 @@
   src: url(src/fonts/VCR_OSD_MONO_1.001.ttf);
 }
 
+body {
+  margin: 0;
+}
+
 @media (prefers-color-scheme: light) {
   body {
     background-color: rgb(43, 2, 43);

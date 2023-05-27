@@ -17,7 +17,7 @@
 >
   <div class="header_holder" in:fade out:fade>
     <h1 class="header" in:fade out:fade>{headerText}</h1>
-    <p class="text" in:fade out:fade>{content}</p>
+    <p class="text" in:fade out:fade>{@html content}</p>
   </div>
   <div
     style="display: flex; flex-direction:column; align-items:center;"

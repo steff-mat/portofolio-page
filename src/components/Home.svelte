@@ -2,10 +2,8 @@
   import ContentBox from './ContentBox.svelte';
   import Filter from './Filter.svelte';
   import * as cheerio from 'cheerio';
-  let cBholder = document.getElementsByClassName('holder');
   let showBlog = false;
   let selectedValue;
-  let cBcat = document.getElementsByClassName(selectedValue);
 
   const sheetUrl =
     'https://docs.google.com/spreadsheets/d/1bsScW5hnMQus6CXvMDCcjMQ6q4iBqZINbmD3rekBFnc/edit#gid=0';
