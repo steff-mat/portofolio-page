@@ -110,7 +110,9 @@
   />
   {#each filteredData as item, i}
     {#if filteredData[i].headerText !== '' && i !== filteredData.length - 1}
-      {#if filteredData[i].category == selectedValue}
+      {#if selectedValue == 'all'}
+        <ContentBox {...filteredData[i]} />
+      {:else if filteredData[i].category == selectedValue}
         <ContentBox {...filteredData[i]} />
       {/if}
     {/if}

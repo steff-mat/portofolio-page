@@ -18,7 +18,7 @@
     bind:value={selectedValue}
     on:change={handleChange}
   >
-    <option value="">All</option>
+    <option value="all">All</option>
     <option value="article">Article</option>
     <option value="project ">Project</option>
     <option value="news">News</option>

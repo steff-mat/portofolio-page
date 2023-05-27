@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  font-size: 0.7rem;
+  /* font-size: 0.7rem; */
 }
 
 @media (prefers-color-scheme: light) {
@@ -26,6 +26,6 @@ body {
 
 @media only screen and (min-width: 786px) {
   body {
-    font-size: 0.7rem;
+    /* font-size: 0.7rem; */
   }
 }
