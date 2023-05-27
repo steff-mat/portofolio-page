@@ -19,9 +19,9 @@
     on:change={handleChange}
   >
     <option value="all">All</option>
-    <option value="article">Article</option>
-    <option value="project ">Project</option>
-    <option value="news">News</option>
+    <option value="Article">Article</option>
+    <option value="Project ">Project</option>
+    <option value="News">News</option>
   </select>
 </div>
 
