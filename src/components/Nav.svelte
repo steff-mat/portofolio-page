@@ -8,13 +8,10 @@
 </script>
 
 <nav>
-  <button class="nav_btn" on:click={() => handleClick('Portofolio')}
-    >Portofolio</button
-  >
+  <button class="nav_btn" on:click={() => handleClick('Home')}>Home</button>
   <button class="nav_btn" on:click={() => handleClick('Contact')}
     >Contact</button
   >
-  <button class="nav_btn" on:click={() => handleClick('Home')}>Home</button>
 </nav>
 
 <style>
@@ -36,7 +33,8 @@
     height: 2.5rem;
     border: 0;
     transition: all 250ms;
-    font-family: VCR_OSD, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'VCR_OSD', Inter, system-ui, Avenir, Helvetica, Arial,
+      sans-serif;
   }
 
   @media (prefers-color-scheme: light) {

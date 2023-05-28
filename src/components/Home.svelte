@@ -25,7 +25,7 @@
       .then((response) => response.text())
       .then((data) => {
         // @ts-ignore
-        welcomeSection.innerText = 'Welcome!';
+        welcomeSection.innerText = 'Welcome! 👾';
         // @ts-ignore
         welcomeSection.style.color = '';
         // @ts-ignore
@@ -51,15 +51,19 @@
               .join('');
             img = `https://drive.google.com/uc?export=download&id=${rawImgPre}`;
           }
-          filteredData.push({
-            id,
-            category,
-            headerText,
-            content,
-            description,
-            img,
-          });
+          if (category !== '') {
+            filteredData.push({
+              id,
+              category,
+              headerText,
+              content,
+              description,
+              img,
+            });
+          }
         });
+        filteredData.reverse();
+        filteredData.shift();
         filteredData = filteredData;
       })
       .catch((error) => {
@@ -107,6 +111,20 @@
     on:valueSelected={(event) => (selectedValue = event.detail)}
   />
   {#each filteredData as item, i}
+    {#if selectedValue == 'all'}
+      <ContentBox {...filteredData[i]} />
+    {:else if filteredData[i].category == selectedValue}
+      <ContentBox {...filteredData[i]} />
+    {/if}
+  {/each}
+{/if}
+
+<!-- {#if showBlog}
+  <Filter
+    bind:selectedValue
+    on:valueSelected={(event) => (selectedValue = event.detail)}
+  />
+  {#each filteredData as item, i}
     {#if filteredData[i].headerText !== '' && i !== filteredData.length - 1}
       {#if selectedValue == 'all'}
         <ContentBox {...filteredData[i]} />
@@ -115,7 +133,7 @@
       {/if}
     {/if}
   {/each}
-{/if}
+{/if} -->
 
 <style>
   svg {

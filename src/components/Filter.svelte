@@ -7,6 +7,9 @@
     const { value } = e.target;
     dispatch('valueSelected', value);
   }
+  // $: postType= {
+  //   All:
+  // }
 </script>
 
 <!-- HTML -->
@@ -37,7 +40,8 @@
     border: none;
     background-color: transparent;
     color: white;
-    font-family: VCR_OSD, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'VCR_OSD', Inter, system-ui, Avenir, Helvetica, Arial,
+      sans-serif;
     text-align: center;
   }
   option {

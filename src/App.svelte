@@ -1,7 +1,6 @@
 <script>
   import Home from './components/Home.svelte';
   import Nav from './components/Nav.svelte';
-  import Portofolio from './components/Portofolio.svelte';
   import Contact from './components/Contact.svelte';
   import Footer from './components/Footer.svelte';
 
@@ -15,9 +14,7 @@
 
 {#if activePage === 'Home'}
   <Home />
-{:else if activePage === 'Portofolio'}
-  <Portofolio />
+  <!-- <Footer /> -->
 {:else if activePage === 'Contact'}
   <Contact />
 {/if}
-<Footer />
