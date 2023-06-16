@@ -119,22 +119,6 @@
   {/each}
 {/if}
 
-<!-- {#if showBlog}
-  <Filter
-    bind:selectedValue
-    on:valueSelected={(event) => (selectedValue = event.detail)}
-  />
-  {#each filteredData as item, i}
-    {#if filteredData[i].headerText !== '' && i !== filteredData.length - 1}
-      {#if selectedValue == 'all'}
-        <ContentBox {...filteredData[i]} />
-      {:else if filteredData[i].category == selectedValue}
-        <ContentBox {...filteredData[i]} />
-      {/if}
-    {/if}
-  {/each}
-{/if} -->
-
 <style>
   svg {
     width: 10%;
