@@ -21,5 +21,9 @@
 		"tailwindcss": "^3.3.2",
 		"vite": "^4.3.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@firebase/firestore": "^3.12.2",
+		"firebase": "^9.22.2"
+	}
 }
