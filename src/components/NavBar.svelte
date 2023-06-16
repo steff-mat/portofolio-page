@@ -1,11 +1,11 @@
 <script>
-	import Language from '../components/Language.svelte';
+	const logo = '< / > | S T F N';
 </script>
 
-<div class="bg-black/25">
-	<nav class="container w-full mx-auto justify-evenly items-center flex h-10">
+<div class="bg-black/25 flex items-center">
+	<p class="whitespace-nowrap px-2 font-bold">{logo}</p>
+	<nav class="container w-full mx-auto justify-around items-center flex flex-wrap min-h-10">
 		<slot />
-		<Language />
 	</nav>
 </div>
 

@@ -2,15 +2,14 @@
 	import '../app.css';
 	import NavBar from '../components/NavBar.svelte';
 	import NavItem from '../components/NavItem.svelte';
+	import Footer from '../components/Footer.svelte';
 	import db from '../../src/app.js';
 	import { collection, getDocs } from 'firebase/firestore';
 	import { onMount } from 'svelte';
 	import { selectedOptionStore } from '$lib/store.js';
-	import Footer from '../components/Footer.svelte';
-	let selectedOption;
+	export let selectedOption;
 	selectedOptionStore.subscribe((value) => (selectedOption = value));
-
-	let locale = [];
+	export let locale = [];
 
 	onMount(async () => {
 		try {
