@@ -7,7 +7,7 @@
 	import { collection, getDocs } from 'firebase/firestore';
 	import { onMount } from 'svelte';
 	import { selectedOptionStore } from '$lib/store.js';
-	export let selectedOption;
+	let selectedOption;
 	selectedOptionStore.subscribe((value) => (selectedOption = value));
 	export let locale = [];
 
